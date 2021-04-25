@@ -1,0 +1,14 @@
+{
+  "name": "heroku-lavalink-server",
+  "version": "1.0.0",
+  "description": "Lavalink-Heroku-Server-With-Filters",
+  "main": "lavalink.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "https://github.com/HellpMe",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
