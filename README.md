@@ -8,7 +8,7 @@ Quer apoiar o projeto ? faça uma doação por [aqui](https://picpay.me/brunoh_d
 
 A instalação automática irá reiniciar seu servidor, portanto tenha consciência de que o repositorio está aberto ao publico para uso livre, não assumirei nenhuma responsabilidade por danos ocorridos!!
 
-### Установка в один клик:
+### Instalação com um clique:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HellpMe/Lavalink-Heroku-24-7/tree/master)
 
 - Buildpacks devem ser adicionados automaticamente, você pode alterar a variável `PASS` durante a instalação para alterar a senha do servidor.
