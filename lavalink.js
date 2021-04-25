@@ -54,5 +54,5 @@ function startLavalink() {
 
 setInterval(() => fetch(process.env.URL), 5 * 60 * 1000);
 
-const cdn = 'https://hellpme.github.io/assets/lavalink/Lavalink.jar'
+const cdn = 'https://cdn.glitch.com/771d0f62-dfc0-4717-bc57-1a0add2b3289%2FLavalink.jar?v=1619393023086'
 download(cdn, './Lavalink.jar', startLavalink)
