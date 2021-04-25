@@ -20,7 +20,7 @@
             "value": "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8"
         },
         "URL": {
-            "description": "URL do seu servidor heroku para manter 24/7",
+            "description": "URL do seu servidor heroku para manter 24/7 exemplo: `nome-do-app.herokuapp.com`",
             "value": "Your_URL_HERE"
         }
     },
