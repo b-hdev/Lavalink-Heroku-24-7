@@ -11,6 +11,8 @@ if (process.env.PORT) {
 if (process.env.PASS) {
     application = application.replace('youshallnotpass', process.env.PASS)
 }
+setInterval(() => fetch('process.env.URL'), 5 * 60 * 1000);
+
 fs.writeFileSync('./application.yml', application)
 
 const download = function (url, dest, cb) { 
@@ -52,7 +54,5 @@ function startLavalink() {
     });
 }
 
-setInterval(() => fetch(process.env.URL), 5 * 60 * 1000);
-
-const cdn = 'http://hellpme.github.io/assets/lavalink/Lavalink.jar'
-download(cdn, './Lavalink.jar', startLavalink)
+const cdn = 'http://cdn.glitch.com/771d0f62-dfc0-4717-bc57-1a0add2b3289%2FLavalink.jar?v=1619724701424'
+download(cdn, './Lavalink.jar',startLavalink)
