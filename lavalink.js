@@ -11,7 +11,6 @@ if (process.env.PORT) {
 if (process.env.PASS) {
     application = application.replace('youshallnotpass', process.env.PASS)
 }
-setInterval(() => fetch('process.env.URL'), 5 * 60 * 1000);
 
 fs.writeFileSync('./application.yml', application)
 
@@ -54,5 +53,27 @@ function startLavalink() {
     });
 }
 
-const cdn = 'http://cdn.glitch.com/771d0f62-dfc0-4717-bc57-1a0add2b3289%2FLavalink.jar?v=1619724701424'
-download(cdn, './Lavalink.jar',startLavalink)
+fetch("https://api.github.com/repos/freyacodes/Lavalink/releases/latest")
+    .then(res => res.json())
+    .then(json => {
+        if(json.assets[0] && json.assets[0].browser_download_url){
+            console.log("Found: "+json.assets[0].browser_download_url)
+            download(json.assets[0].browser_download_url, "./Lavalink.jar", startLavalink)
+        }else{
+            console.warn("Could not find .jar for latest release!")
+            console.warn("Attempting to download previous release...")
+            
+            let priorVersion = json["tag_name"].split(".")
+            priorVersion[priorVersion.length-1] = Number(priorVersion[priorVersion.length-1])-1
+            priorVersion[0] = priorVersion[0].replace("v","")
+            priorVersion = priorVersion.join(".")
+
+            let priorDL_URL = `https://github.com/freyacodes/Lavalink/releases/download/${priorVersion}/Lavalink.jar`
+            console.log("Found: "+priorDL_URL)
+            download(priorDL_URL, "./Lavalink.jar", startLavalink)
+        }
+
+    })
+    .catch(err =>{
+        console.error("Error occured when fetching latest release url: "+err)
+    });
