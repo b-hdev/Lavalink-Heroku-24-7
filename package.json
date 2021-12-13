@@ -1,14 +1,28 @@
 {
-  "name": "heroku-lavalink-server",
-  "version": "1.0.0",
-  "description": "Lavalink-Heroku-Server-With-Filters",
+  "name": "lavalink-server",
+  "version": "2.0.0",
+  "description": "lavalink server updated",
   "main": "lavalink.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HellpMe/Lavalink-Heroku-24-7.git"
+  },
+  "keywords": [
+    "Lavalink",
+    "Heroku",
+    "Filters"
+  ],
   "author": "https://github.com/HellpMe",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HellpMe/Lavalink-Heroku-24-7/issues"
+  },
+  "homepage": "https://github.com/HellpMe/Lavalink-Heroku-24-7#readme",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "dotenv": "^10.0.0",
+    "node-fetch": "^3.1.0"
   }
 }
