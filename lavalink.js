@@ -12,7 +12,7 @@ if (process.env.PASSWD) {
     application = application.replace('youshallnotpass', process.env.PASSW);
 }
 
-fs.readFileSync('./application.yml', application);
+fs.writeFileSync('./application.yml', application);
 
 const download = function (url, dest, cb) { 
     const file = fs.createWriteStream(dest);
