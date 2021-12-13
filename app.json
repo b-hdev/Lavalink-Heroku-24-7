@@ -1,31 +1,34 @@
 {
-    "name": "heroku-lavalink-server",
-    "description": "lavalink server",
-    "keywords":[
-        "lavalink",
-        "wavelink",
-        "discord.py",
-        "discord.js",
-        "24/7",
-        "heroku"
+    "name": "lavalink server",
+    "description": "A Heroku app to deploy your own Lavalink server.",
+    "keywords": [
+      "Lavalink",
+      "lavalink",
+      "discord-music-streaming",
+      "lavalink-on-heroku"
     ],
     "repository": "https://github.com/HellpMe/Lavalink-Heroku-24-7",
     "env": {
-        "PASS": {
-            "description": "Esta variável é responsável pela senha.",
-            "value": "youshallnotpass"
-        },
-        "JAVA_TOOL_OPTIONS": {
-            "description": "Isso define a RAM para o máximo (não altere) esta variável, caso apresente algum erro diminua para `-Xmx495 -Xss254k`",
-            "value": "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8"
-        }
+      "PASS": {
+        "description": "Set this for authorization for your lavalink server. default: youshallnotpass",
+        "value": "youshallnotpass"
+      },
+      "APP_NAME": {
+        "description": "The heroku app name to keep alive retype the 'App name'. Leave empty to disable internal pinging.",
+        "value": "your-app-name"
+      },
+      "JAVA_TOOL_OPTIONS": {
+        "description": "Isso define a RAM para o máximo (não altere) esta variável, caso apresente algum erro diminua para `-Xmx495 -Xss254k`",
+        "value": "-XX:+UseContainerSupport -Xmx500m -Xss256k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8"
+    }
+    
     },
     "buildpacks": [
-        {
-            "url": "heroku/nodejs"
-        },
-        {
-            "url": "heroku/java"
-        }
+      {
+        "url": "heroku/nodejs"
+      },
+      {
+        "url": "heroku/java"
+      }
     ]
-}
+  }
