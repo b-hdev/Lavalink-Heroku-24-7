@@ -19,7 +19,7 @@ A instalação automática irá reiniciar seu servidor, portanto tenha consciên
 2. Lembre de completar tudo que está pedindo no app.json para total funcionamento.
 3. Se o Heroku não puder configurar buildpacks automaticamente, vá para as configurações de seus projetos no site do Heroku e adicione `java e nodejs.`
 
-Atenção, entenda que seu servidor lavalink está **sem memória**. Se você estiver fazendo uma atualização, deve alterar **- Xmx** em `JAVA_TOOL_OPTIONS` para a nova quantidade de RAM disponivel em seu servidor
+Atenção, entenda que se seu servidor lavalink está **sem memória**. Se você estiver fazendo uma atualização, deve alterar **- Xmx** em `JAVA_TOOL_OPTIONS` para a nova quantidade de RAM disponivel em seu servidor
 
 - Caso queira contribuir com o projeto envie uma pull request <3
 
