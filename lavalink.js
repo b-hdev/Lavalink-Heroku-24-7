@@ -1,23 +1,22 @@
+require('dotenv').config(),
+ https = require('https')
+ fs = require('fs')
 
-const fs = require('fs')
-const http = require('http')
-const fetch = require('node-fetch')
-let application = fs.readFileSync('./application.yml', 'utf8')
+let application = fs.readFileSync('./application.yml', 'utf8');
 
 if (process.env.PORT) {
     application = application.replace('DYNAMICPORT', process.env.PORT)
 }
 
-if (process.env.PASS) {
-    application = application.replace('youshallnotpass', process.env.PASS)
+if (process.env.PASSWD) {
+    application = application.replace('youshallnotpass', process.env.PASSW');
 }
-setInterval(() => fetch('process.env.URL'), 5 * 60 * 1000);
 
-fs.writeFileSync('./application.yml', application)
+fs.readFileSync('./application.yml', application);
 
 const download = function (url, dest, cb) { 
     const file = fs.createWriteStream(dest);
-    http.get(url, function (response) {
+    https.get(url, function (response) {
         response.pipe(file);
         console.log('Downloading Lavalink.jar')
         file.on('finish', function () {
@@ -50,9 +49,25 @@ function startLavalink() {
     });
 
     child.on('close', (code) => {
-        console.log(`Lavalink encerrado devido ao erro: ${code}`);
+        console.log(`Lavalink exited with code ${code}`);
     });
+    
+    if (process.env.APP_NAME)
+        keepAlive();
 }
 
-const cdn = 'http://cdn.glitch.com/96fd362d-e92b-4d84-b58e-da33e2956d72%2FLavalink.jar?v=1627883381993'
-download(cdn, './Lavalink.jar' ,startLavalink)
+const cdn = 'https://cdn.glitch.me/2a674deb-9949-48d4-b15d-fc7f66317700%2FLavalink.jar?v=1639416443189'
+download(cdn, './2a674deb-9949-48d4-b15d-fc7f66317700_Lavalink.jar', startLavalink);
+
+function keepAlive() {
+    console.log('Keeping alive.');
+
+    const fetch = require('node-fetch');
+
+    let count = 0;
+    setInterval(() =>
+        fetch(`http://${process.env.APP_NAME}/`, { headers: { Authorization: process.env.PASS } })
+            .then(() => console.log(`[${++count}] Kept server alive.`))
+            .catch(() => console.log(`Failed to keep server alive.`))
+        , 2 * 60 * 1000);
+}
