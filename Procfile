@@ -1,2 +1,2 @@
-web: npm start
-worker: npm start
+web: node lavalink.js
+worker: node .
