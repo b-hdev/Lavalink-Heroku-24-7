@@ -9,7 +9,7 @@ if (process.env.PORT) {
 }
 
 if (process.env.PASSWD) {
-    application = application.replace('youshallnotpass', process.env.PASSW');
+    application = application.replace('youshallnotpass', process.env.PASSW);
 }
 
 fs.readFileSync('./application.yml', application);
