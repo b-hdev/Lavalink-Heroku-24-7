@@ -16,16 +16,10 @@ A instalação automática irá reiniciar seu servidor, portanto tenha consciên
 
 ## Erros/Advertências:
 1. Após alterar o `PASS`, você deve expandir novamente ou clicar no menu` More` e clicar em **Restart all dynos**.
-2. Se o Heroku não puder configurar buildpacks automaticamente, vá para as configurações de seus projetos no site do Heroku e adicione `java e nodejs.`
+2. Lembre de completar tudo que está pedindo no app.json para total funcionamento.
+3. Se o Heroku não puder configurar buildpacks automaticamente, vá para as configurações de seus projetos no site do Heroku e adicione `java e nodejs.`
 
 Atenção, entenda que seu servidor lavalink está **sem memória**. Se você estiver fazendo uma atualização, deve alterar **- Xmx** em `JAVA_TOOL_OPTIONS` para a nova quantidade de RAM disponivel em seu servidor
-
-## ATENÇÃO!!
-- Para funcionar 24/7 na heroku você devera fazer um fork desse repositorio e editar as seguintes partes 
-- URL dentro do arquivo `lavalink.js` linha 15
-- Onde está `seu_nome_aqui` colocar seu usuario do github, para funcionar você deve fazer um fork desse repositorio!!
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/seu_nome_aqui/Lavalink-Heroku-24-7/tree/master)
 
 - Caso queira contribuir com o projeto envie uma pull request <3
 
