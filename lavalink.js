@@ -56,7 +56,7 @@ function startLavalink() {
         keepAlive();
 }
 
-const cdn = 'https://cdn.glitch.global/34660ccc-c58c-42fb-a83b-a820dd9f9e8e/Lavalink.jar?v=1642091839723'
+const cdn = 'https://ci.fredboat.com/repository/download/Lavalink_Build/.lastSuccessful/Lavalink.jar?guest=1&branch=refs/heads/dev'
 download(cdn, './Lavalink.jar', startLavalink);
 
 function keepAlive() {
