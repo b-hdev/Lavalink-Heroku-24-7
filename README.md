@@ -3,7 +3,7 @@
 Versão do lavalink: **v1.3.97** FUNCIONANDO!!
 
 Quer apoiar o projeto ? faça uma doação por [aqui](https://picpay.me/brunoh_dev)
-- Nosso servidor de suporte [Discord](https://discord.tredux.xyz)
+- Nosso servidor de suporte [Discord](https://discord.gg/HK3tHpzQdn)
 
 ##### Atenção!
 
