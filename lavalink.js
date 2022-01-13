@@ -56,8 +56,8 @@ function startLavalink() {
         keepAlive();
 }
 
-const cdn = 'https://cdn.glitch.me/2a674deb-9949-48d4-b15d-fc7f66317700%2FLavalink.jar?v=1639416443189'
-download(cdn, './2a674deb-9949-48d4-b15d-fc7f66317700_Lavalink.jar', startLavalink);
+const cdn = 'https://cdn.glitch.global/34660ccc-c58c-42fb-a83b-a820dd9f9e8e/Lavalink.jar?v=1642091839723'
+download(cdn, './Lavalink.jar', startLavalink);
 
 function keepAlive() {
     console.log('Keeping alive.');
