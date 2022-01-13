@@ -1,6 +1,6 @@
-require('dotenv').config(),
- https = require('https')
- fs = require('fs')
+require('dotenv').config()
+const https = require('https')
+const fs = require('fs')
 
 let application = fs.readFileSync('./application.yml', 'utf8');
 
@@ -9,7 +9,7 @@ if (process.env.PORT) {
 }
 
 if (process.env.PASSWD) {
-    application = application.replace('youshallnotpass', process.env.PASSW);
+    application = application.replace('youshallnotpass', process.env.PASSW)
 }
 
 fs.writeFileSync('./application.yml', application);
@@ -33,8 +33,8 @@ function startLavalink() {
     const spawn = require('child_process').spawn;
     const child = spawn('java', ['-jar', 'Lavalink.jar'])
 
-    child.stdout.setEncoding('utf8')
-    child.stderr.setEncoding('utf8')
+    child.stdout.setEncoding("utf8")
+    child.stderr.setEncoding("utf8")
 
     child.stdout.on('data', (data) => {
         console.log(data);
