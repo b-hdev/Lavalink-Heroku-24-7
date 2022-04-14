@@ -5,7 +5,7 @@ const fs = require('fs')
 let application = fs.readFileSync('./application.yml', 'utf8');
 
 if (process.env.PORT) {
-    application = application.replace('DYNAMICPORT', process.env.PORT)
+    application = application.replace('3000', process.env.PORT)
 }
 
 if (process.env.PASSWD) {
