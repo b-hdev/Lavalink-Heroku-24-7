@@ -18,7 +18,7 @@
         "value": "your-app-name"
       },
       "JAVA_TOOL_OPTIONS": {
-        "description": "Isso define a RAM para o máximo (não altere) esta variável, caso apresente algum erro diminua para `-Xmx495 -Xss254k`",
+        "description": "Isso define a RAM para o máximo (não altere) esta variável`",
         "value": "Xmx400m -Xms400m -XX:MaxPermSize=48m"
     }
     
