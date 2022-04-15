@@ -1,4 +1,3 @@
-const dotenv = require('dotenv').config();
 const https = require('https')
 const fs = require('fs')
 
@@ -69,5 +68,5 @@ function keepAlive() {
         fetch(`http://${process.env.APP_NAME}/`, { headers: { Authorization: process.env.PASSW } })
             .then(() => console.log(`[${++count}] Kept server alive.`))
             .catch(() => console.log(`Failed to keep server alive.`))
-        , 2 * 60 * 1000);
+        , 20 * 60 * 1000);
 }
