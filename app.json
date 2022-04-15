@@ -15,7 +15,8 @@
       },
       "APP_NAME": {
         "description": "The heroku app name to keep alive retype the 'App name'. Leave empty to disable internal pinging.",
-        "value": "your-app-name"
+        "value": "your-app-name",
+        "required": false
       },
       "JAVA_TOOL_OPTIONS": {
         "description": "Isso define a RAM para o máximo (não altere) esta variável`",
