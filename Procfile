@@ -1,2 +1,2 @@
-web: node lavalink.js -p $PORT
+web: node lavalink.js
 worker: node .
